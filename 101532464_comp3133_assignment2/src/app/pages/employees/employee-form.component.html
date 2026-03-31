@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="card border">
+    <div class="card-body p-4">
+      <h3 class="text-center mb-4">{{ mode === 'add' ? 'Add Employee' : 'Update Employee' }}</h3>
+      <div class="alert alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="row justify-content-center">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">First Name</label>
+            <input class="form-control" formControlName="first_name" />
+            <small class="text-danger" *ngIf="form.controls.first_name.touched && form.controls.first_name.errors?.['required']">
+              First name is required.
+            </small>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Last Name</label>
+            <input class="form-control" formControlName="last_name" />
+            <small class="text-danger" *ngIf="form.controls.last_name.touched && form.controls.last_name.errors?.['required']">
+              Last name is required.
+            </small>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Email</label>
+            <input class="form-control" formControlName="email" />
+            <small class="text-danger" *ngIf="form.controls.email.touched && form.controls.email.errors?.['required']">
+              Email is required.
+            </small>
+            <small class="text-danger d-block" *ngIf="form.controls.email.touched && form.controls.email.errors?.['email']">
+              Enter a valid email.
+            </small>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Gender</label>
+            <select class="form-select" formControlName="gender">
+              <option value="">Select</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+            <small class="text-danger" *ngIf="form.controls.gender.touched && form.controls.gender.errors?.['required']">
+              Gender is required.
+            </small>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Designation</label>
+            <input class="form-control" formControlName="designation" />
+            <small class="text-danger" *ngIf="form.controls.designation.touched && form.controls.designation.errors?.['required']">
+              Designation is required.
+            </small>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Department</label>
+            <input class="form-control" formControlName="department" />
+            <small class="text-danger" *ngIf="form.controls.department.touched && form.controls.department.errors?.['required']">
+              Department is required.
+            </small>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Salary</label>
+            <input type="number" class="form-control" formControlName="salary" />
+            <small class="text-danger" *ngIf="form.controls.salary.touched && form.controls.salary.errors?.['required']">
+              Salary is required.
+            </small>
+            <small class="text-danger d-block" *ngIf="form.controls.salary.touched && form.controls.salary.errors?.['min']">
+              Salary must be at least 1000.
+            </small>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Date of Joining</label>
+            <input type="date" class="form-control" formControlName="date_of_joining" />
+            <small class="text-danger" *ngIf="form.controls.date_of_joining.touched && form.controls.date_of_joining.errors?.['required']">
+              Date of joining is required.
+            </small>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Employee Photo</label>
+            <input class="form-control" type="file" (change)="onFileChange($event)" accept="image/*" />
+          </div>
+        </div>
+
+        <div class="text-center mt-2">
+          <button class="btn btn-success me-2" [disabled]="loading">
+            {{ loading ? 'Saving...' : 'Save' }}
+          </button>
+          <a class="btn btn-danger" routerLink="/employees">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

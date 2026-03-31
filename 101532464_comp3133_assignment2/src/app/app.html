@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <div class="d-flex align-items-center w-100">
+      <div class="nav-slot"></div>
+
+      <div class="flex-grow-1 text-center">
+        <a class="navbar-brand fw-semibold m-0" routerLink="/employees">Employee Management App</a>
+      </div>
+
+      <div class="nav-slot d-flex justify-content-end gap-2" *ngIf="isLoggedIn()">
+        <a class="btn btn-outline-light btn-sm" routerLink="/employees/search">Search</a>
+        <button class="btn btn-warning btn-sm" type="button" (click)="logout()">Logout</button>
+      </div>
+      <div class="nav-slot" *ngIf="!isLoggedIn()"></div>
+    </div>
+  </div>
+</nav>
+
+<main class="py-4">
+  <router-outlet></router-outlet>
+</main>

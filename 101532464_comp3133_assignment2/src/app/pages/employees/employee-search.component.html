@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="card border mb-3">
+    <div class="card-body">
+      <h4 class="mb-3">Search Employees</h4>
+      <form [formGroup]="form" (ngSubmit)="search()">
+        <div class="row g-2">
+          <div class="col-md-5">
+            <input class="form-control" placeholder="Designation" formControlName="designation" />
+          </div>
+          <div class="col-md-5">
+            <input class="form-control" placeholder="Department" formControlName="department" />
+          </div>
+          <div class="col-md-2 d-grid">
+            <button class="btn btn-dark" type="submit">Search</button>
+          </div>
+        </div>
+      </form>
+      <small class="text-muted">Search by designation, department, or both.</small>
+    </div>
+  </div>
+
+  <div class="alert alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+  <div class="table-responsive bg-white p-2 rounded border" *ngIf="results.length">
+    <table class="table table-bordered table-sm mb-0">
+      <thead>
+        <tr>
+          <th>Employee First Name</th>
+          <th>Employee Last Name</th>
+          <th>Employee Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of results">
+          <td>{{ employee.first_name }}</td>
+          <td>{{ employee.last_name }}</td>
+          <td>{{ employee.email }}</td>
+          <td>
+            <a class="btn btn-sm btn-primary" [routerLink]="['/employees', employee._id]">View</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
