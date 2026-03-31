@@ -1,17 +1,17 @@
 <div align="center">
 
-# 🚀 GraphQL Employee Management API
+# 🚀 Employee Management Frontend (Angular)
 
-### COMP3133 — Full Stack Development
+### COMP3133 — Full Stack Development II
 
 👨‍🎓 **Student:** Heemal Syangbo  
 🆔 **Student ID:** 101532464  
 
 ---
 
-![NodeJS](https://img.shields.io/badge/Node.js-Backend-green)
-![GraphQL](https://img.shields.io/badge/GraphQL-Apollo-purple)
-![MongoDB](https://img.shields.io/badge/MongoDB-Database-brightgreen)
+![Angular](https://img.shields.io/badge/Angular-Frontend-red)
+![GraphQL](https://img.shields.io/badge/GraphQL-Integration-purple)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-UI-blue)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 
 </div>
@@ -20,51 +20,40 @@
 
 ## 📌 Project Overview
 
-This project implements a **GraphQL Employee Management API** using:
+This project is the **Assignment 2 frontend** for COMP3133, built using **Angular** and connected to the Assignment 1 backend via **GraphQL**.
 
-✨ Node.js  
-✨ Apollo GraphQL Server  
-✨ MongoDB + Mongoose  
+It provides a complete employee management system with:
 
-The system allows authentication and full CRUD operations for employee records using GraphQL queries and mutations.
+- Authentication (Signup/Login/Logout)
+- Employee CRUD
+- Search by designation or department
+- Employee photo support (base64 image)
+- Protected routes and form validation
 
 ---
 
 ## ⚡ Features
 
-### 🔎 Queries
+### 🔐 Authentication
+- ✅ Signup
+- ✅ Login
+- ✅ JWT token handling in `localStorage`
+- ✅ Logout with redirect to login
+- ✅ Route guard for protected employee pages
 
-- ✅ User Login Authentication  
-- ✅ Get All Employees  
-- ✅ Search Employee by ID  
-- ✅ Search Employee by Designation or Department  
+### 👨‍💼 Employee Management
+- ✅ List all employees in table format
+- ✅ Add new employee
+- ✅ View employee details
+- ✅ Update employee details
+- ✅ Delete employee
+- ✅ Search by department/designation
+- ✅ Employee photo add/update/display
 
----
-
-### ✏️ Mutations
-
-- ✅ User Signup  
-- ✅ Add New Employee  
-- ✅ Update Employee Details  
-- ✅ Delete Employee  
-
----
-
-## 🧪 Testing
-
-All functionalities were tested using:
-
-👉 Apollo GraphQL Sandbox
-
-### ✔ Verified Operations
-
-- ✔ Login Authentication  
-- ✔ Employee Creation  
-- ✔ Employee Search Queries  
-- ✔ Employee Update  
-- ✔ Employee Deletion  
-
-Screenshots of testing are included in the assignment documentation.
+### 🧾 Validation & UX
+- ✅ Reactive Forms validations
+- ✅ Visible error messages
+- ✅ Responsive and clean Bootstrap UI
 
 ---
 
@@ -72,16 +61,42 @@ Screenshots of testing are included in the assignment documentation.
 
 | Technology | Usage |
 |------------|-------|
-| Node.js | Backend runtime |
-| GraphQL (Apollo Server) | API Layer |
-| MongoDB | Database |
-| Mongoose | ODM |
-| bcryptjs | Password Encryption |
+| Angular | Frontend framework |
+| Angular Router | Navigation/routing |
+| Reactive Forms | Form handling and validation |
+| HttpClient | GraphQL requests |
+| GraphQL | API communication |
+| Bootstrap | Styling and UI |
 
 ---
 
-<div align="center">
+## 📁 Main Routes
 
-⭐ **COMP3133 Assignment 2 — GraphQL API Implementation** ⭐
+- `/login`
+- `/signup`
+- `/employees`
+- `/employees/add`
+- `/employees/:id`
+- `/employees/edit/:id`
+- `/employees/search`
 
-</div> 
+---
+
+## 🔗 Backend Dependency (Assignment 1)
+
+This frontend requires the Assignment 1 backend running on:
+
+- `http://localhost:4000/graphql`
+
+Make sure backend is started before frontend.
+
+---
+
+## ▶️ Run Locally
+
+### 1) Run Backend (Assignment 1)
+
+```bash
+cd /Users/heemalsyangbo/comp3133/Assignment1/101532464_comp3133_assignment1
+npm install
+npm run dev
