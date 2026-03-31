@@ -84,5 +84,4 @@ Screenshots of testing are included in the assignment documentation.
 
 ⭐ **COMP3133 Assignment 1 — GraphQL API Implementation** ⭐
 
-</div>
-now update this readme. file for assignment 2 
+</div> 
