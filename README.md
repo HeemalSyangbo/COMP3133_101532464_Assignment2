@@ -82,6 +82,6 @@ Screenshots of testing are included in the assignment documentation.
 
 <div align="center">
 
-⭐ **COMP3133 Assignment 1 — GraphQL API Implementation** ⭐
+⭐ **COMP3133 Assignment 2 — GraphQL API Implementation** ⭐
 
 </div> 
