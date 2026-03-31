@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🚀 Employee Management Frontend (Angular)
+# 🚀 Employee Management System (Frontend)
 
-### COMP3133 — Full Stack Development II
+### COMP3133 — Full Stack Development
 
 👨‍🎓 **Student:** Heemal Syangbo  
 🆔 **Student ID:** 101532464  
@@ -10,7 +10,7 @@
 ---
 
 ![Angular](https://img.shields.io/badge/Angular-Frontend-red)
-![GraphQL](https://img.shields.io/badge/GraphQL-Integration-purple)
+![GraphQL](https://img.shields.io/badge/GraphQL-Apollo-purple)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-UI-blue)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 
@@ -19,84 +19,79 @@
 ---
 
 ## 📌 Project Overview
-
-This project is the **Assignment 2 frontend** for COMP3133, built using **Angular** and connected to the Assignment 1 backend via **GraphQL**.
-
-It provides a complete employee management system with:
-
-- Authentication (Signup/Login/Logout)
-- Employee CRUD
-- Search by designation or department
-- Employee photo support (base64 image)
-- Protected routes and form validation
+Angular frontend connected to GraphQL backend (Assignment 1) for managing employee records with authentication and full CRUD functionality.
 
 ---
 
 ## ⚡ Features
 
-### 🔐 Authentication
-- ✅ Signup
-- ✅ Login
-- ✅ JWT token handling in `localStorage`
-- ✅ Logout with redirect to login
-- ✅ Route guard for protected employee pages
+### 🔎 Core Functionalities
+- User Signup, Login, Logout  
+- JWT Authentication (localStorage)  
+- Protected Routes  
+- View Employees  
+- Add Employee (with image upload)  
+- View Details  
+- Update Employee  
+- Delete Employee  
+- Search by Designation/Department  
 
-### 👨‍💼 Employee Management
-- ✅ List all employees in table format
-- ✅ Add new employee
-- ✅ View employee details
-- ✅ Update employee details
-- ✅ Delete employee
-- ✅ Search by department/designation
-- ✅ Employee photo add/update/display
+---
 
-### 🧾 Validation & UX
-- ✅ Reactive Forms validations
-- ✅ Visible error messages
-- ✅ Responsive and clean Bootstrap UI
+## 🧪 Testing
+Tested via Angular UI:
+- Authentication ✔  
+- Employee CRUD ✔  
+- Search ✔  
+- Image Upload ✔  
+- Route Protection ✔  
+
+Screenshots included in submission.
 
 ---
 
 ## 🛠️ Tech Stack
-
-| Technology | Usage |
-|------------|-------|
-| Angular | Frontend framework |
-| Angular Router | Navigation/routing |
-| Reactive Forms | Form handling and validation |
-| HttpClient | GraphQL requests |
-| GraphQL | API communication |
-| Bootstrap | Styling and UI |
+- Angular  
+- Angular Router  
+- Reactive Forms  
+- HttpClient  
+- GraphQL  
+- Bootstrap  
 
 ---
 
-## 📁 Main Routes
+## 🚀 Run Application
 
-- `/login`
-- `/signup`
-- `/employees`
-- `/employees/add`
-- `/employees/:id`
-- `/employees/edit/:id`
-- `/employees/search`
+### Backend
+cd /Users/heemalsyangbo/comp3133/Assignment1/101532464_comp3133_assignment1  
+npm install  
+npm run dev  
 
----
+### Frontend
+cd /Users/heemalsyangbo/comp3133/Assignment1/101532464_comp3133_assignment2  
+npm install  
+npm start  
 
-## 🔗 Backend Dependency (Assignment 1)
-
-This frontend requires the Assignment 1 backend running on:
-
-- `http://localhost:4000/graphql`
-
-Make sure backend is started before frontend.
+Frontend: http://localhost:4200  
+Backend: http://localhost:4000/graphql  
 
 ---
 
-## ▶️ Run Locally
+## ⚙️ Environment
+Update API URL in:
+- src/environments/environment.ts  
+- src/environments/environment.prod.ts  
 
-### 1) Run Backend (Assignment 1)
+---
 
-```bash
-cd /Users/heemalsyangbo/comp3133/Assignment1/101532464_comp3133_assignment1
-npm install
-npm run dev
+## 🔑 Test User
+Email: hs@gmail.com  
+Password: hs@123  
+
+---
+
+<div align="center">
+
+⭐ COMP3133 Assignment 2 — Angular Frontend Implementation ⭐
+
+</div>
